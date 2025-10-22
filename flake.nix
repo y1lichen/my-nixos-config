@@ -28,7 +28,9 @@
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
 
-          home-manager.users.chen = import ./modules/home/default.nix;
+          home-manager.users.chen = {
+            imports = [ ./modules/home/default.nix ];
+          };
         }
       ];
     };
