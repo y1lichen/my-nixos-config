@@ -4,7 +4,7 @@
   imports = [
     ../modules/core.nix
     ../modules/user.nix
-    /etc/nixos/hardware-configuration.nix 
+    ../modules/hardware/vm.nix
   ];
 
   system.stateVersion = "25.05";
