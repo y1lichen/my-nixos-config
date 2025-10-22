@@ -3,7 +3,7 @@
   imports = [
 
     ./git.nix
-    (import ./neovim.nix { my-nvim-config; }) 
+    (import ./neovim.nix { my-nvim-config }) 
   ];
 
   home.username = "chen";
