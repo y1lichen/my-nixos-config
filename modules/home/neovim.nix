@@ -7,7 +7,7 @@
     vimAlias = true;
   };
 
-  home.file.".config/nvim" = {
+  home.files.".config/nvim" = {
 
     source = my-nvim-config; 
     
