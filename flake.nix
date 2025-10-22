@@ -7,7 +7,7 @@
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
-    }
+    };
     
     my-nvim-config = {
       url = "github:y1lichen/my-neovim-config";
