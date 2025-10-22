@@ -1,4 +1,4 @@
-{ config, pkgs, my-nvim, ... }:
+{ config, pkgs, ... }:
 
 {
   programs.neovim = {
@@ -7,5 +7,8 @@
     vimAlias = true;
   };
 
-  home.file.".config/nvim".source = "${my-nvim}";
+  home.file.".config/nvim".source = builtins.fetchGit {
+    url = "https://github.com/y1lichen/my-neovim-config.git";
+    ref = "refs/heads/main";
+  };
 }
