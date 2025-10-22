@@ -1,4 +1,4 @@
-{ pkgs, my-nvim-config, ... }:
+{ config, pkgs, my-nvim-config, ... }:
 {
 
   programs.neovim = {
