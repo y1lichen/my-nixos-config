@@ -26,7 +26,7 @@
           home-manager.useUserPackages = true;
           home-manager.users.chen = import ./modules/home/default.nix {
              pkgs = pkgsForSystem;
-             inherit pkgs my-nvim-config;
+             inherit my-nvim-config;
           };
         }
       ];
