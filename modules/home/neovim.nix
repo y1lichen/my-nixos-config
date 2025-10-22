@@ -11,7 +11,6 @@
 
     source = my-nvim-config; 
     
-    type = "directory";
     recursive = true;
     force = true; 
   };
