@@ -1,9 +1,9 @@
-{ config, pkgs, ... }:
-
+{ config, pkgs, my-nvim-config, ... }:
 {
   imports = [
+
     ./git.nix
-    ./neovim.nix
+    (import ./neovim.nix { inherit pkgs config my-nvim-config; }) 
   ];
 
   home.username = "chen";
