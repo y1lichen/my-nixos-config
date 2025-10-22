@@ -3,7 +3,11 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
-    home-manager.url = "github:nix-community/home-manager";
+    
+    home-manager = {
+      url = "github:nix-community/home-manager/release-25.05";
+    };
+
     my-nvim-config = {
       url = "github:y1lichen/my-neovim-config";
       flake = false;
