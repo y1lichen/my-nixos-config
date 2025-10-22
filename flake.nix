@@ -8,7 +8,6 @@
 
     # 這裡加入你的 Neovim 設定 repo
     my-nvim.url = "github:y1lichen/my-neovim-config";
-    my-nvim.branch = "main";
   };
 
   outputs = { self, nixpkgs, home-manager, my-nvim, ... }: {
