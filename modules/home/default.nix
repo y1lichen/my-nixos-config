@@ -2,7 +2,7 @@
 {
   imports = [
 
-    ./git.nix
+    (import ./git.nix { inherit pkgs config; })
     (import ./neovim.nix { inherit pkgs config my-nvim-config; }) 
   ];
 
