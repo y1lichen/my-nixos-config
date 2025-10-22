@@ -1,17 +1,17 @@
 { config, pkgs, ... }:
 
 {
-  fileSystems."/".device = "/dev/vda2";
+  fileSystems."/".device = "/dev/vda1";
   fileSystems."/".fsType = "ext4";
 
-  fileSystems."/boot/efi" = {
-    device = "/dev/vda1";
-    fsType = "vfat";
-  };
+  swapDevices = [
+    { device = "/dev/vda2"; }
+  ];
 
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.efi.efiSysMountPoint = "/boot/efi";
+  boot.loader.grub.enable = true;
+  boot.loader.grub.version = 2;
+  boot.loader.grub.device = "/dev/vda";
+  boot.loader.efi.enable = false;
 
   networking.hostName = "laptop";
 }
