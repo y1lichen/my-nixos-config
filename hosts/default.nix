@@ -6,7 +6,7 @@
 
   # 如果您打算使用 SSH Key，可以將其設為 false
   services.openssh.passwordAuthentication = true; 
-  
+  systemd.services.sshd.wantedBy = [ "multi-user.target" ];
   # (可選) 允許 root 帳號登入 (出於安全考量，一般不推薦)
   # services.openssh.permitRootLogin = "no";
   
