@@ -4,6 +4,7 @@
 
     ./git.nix
     ./neovim.nix
+    ./tmux.nix
   ];
 
   home.username = "chen";

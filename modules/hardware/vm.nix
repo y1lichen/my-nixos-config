@@ -5,10 +5,10 @@
   fileSystems."/".device = "/dev/vda1";
   fileSystems."/".fsType = "ext4";
 
-  # swap
-  swapDevices = [
-    { device = "/dev/vda2"; }
-  ];
+  # # swap
+  # swapDevices = [
+  #   { device = "/dev/vda2"; }
+  # ];
 
   # Bootloader（GRUB 安裝到 MBR）
   boot.loader.grub.enable = true;
