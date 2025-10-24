@@ -1,11 +1,7 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, ... }:
 {
   programs.tmux = {
     enable = true;
-    home.packages = with pkgs; [
-      xclip 
-      wl-clipboard
-    ];
 
     # 設定配置內容
     extraConfig = ''
@@ -47,4 +43,8 @@
       bind -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "wl-copy || xclip -selection clipboard -i"
     '';
   };
+  home.packages = with pkgs; [
+    xclip
+    wl-clipboard
+  ];
 }
