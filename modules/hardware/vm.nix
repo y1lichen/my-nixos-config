@@ -15,6 +15,9 @@
   boot.loader.grub.version = 2;
   boot.loader.grub.device = "/dev/vda";
 
-  # 主機名稱
-  networking.hostName = "laptop";
+  networking = {
+    hostName = "laptop";
+    nameservers = [ "8.8.8.8" "1.1.1.1" ];    
+    # networkmanager.enable = true; 
+  };
 }
