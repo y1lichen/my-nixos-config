@@ -11,5 +11,9 @@
   home.homeDirectory = "/home/chen";
   home.stateVersion = "25.05";
 
+  home.packages = with pkgs; [
+    htop
+    fastfetch
+  ];
   programs.home-manager.enable = true;
 }
